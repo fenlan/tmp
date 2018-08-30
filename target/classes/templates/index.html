@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${title}"></title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+        main {
+            margin-left: 14%;
+        }
+        .panel {
+            background: lightgray;
+            padding-right: 0px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            margin-left: 0px;
+        }
+        body {
+            background: #f0f1f2;
+        }
+        .seletctbar {
+            display: inline-block;
+            width: 15%;
+        }
+    </style>
+    <div th:replace="fragments/header :: css"></div>
+    <div th:replace="fragments/sider :: css"></div>
+    <link rel="stylesheet" th:href="@{layui/css/layui.css}">
+    <script th:src="@{layui/layui.all.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div>
+    <div th:replace="fragments/sider :: sider" style="display: inline"></div>
+    <div style="display: inline">
+        <div>
+            <main role="main">
+                <form class="layui-form" action="">
+                    <div class=" panel panel-default ml-sm-auto col-sm-12 col-md-12 col-lg-12 title-padding">
+                        <div class="seletctbar">
+                            <label class="layui-form-label">客户端</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                    <option value="0">全部</option>
+                                    <option value="1">安卓</option>
+                                    <option value="2">IOS</option>
+                                    <option value="3">IOS越狱</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seletctbar">
+                            <label class="layui-form-label">平台</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                    <option value="0">全部</option>
+                                    <option value="1">w173</option>
+                                    <option value="2">laohu</option>
+                                    <option value="3">xiaomi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seletctbar">
+                            <label class="layui-form-label">服务器</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                    <option value="0">全部</option>
+                                    <option value="1">10011</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seletctbar">
+                            <label class="layui-form-label">渠道</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                    <option value="0">全部</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="1">4</option>
+                                    <option value="2">5</option>
+                                    <option value="3">6</option>
+                                    <option value="1">7</option>
+                                    <option value="2">8</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seletctbar">
+                            <label class="layui-form-label">日期</label>
+                            <div class="layui-input-block">
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input" id="test1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </main>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('form', function(){
+        var form = layui.form;
+        form.render();
+    });
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#test1'
+        });
+    });
+
+</script>
+</body>
+</html>

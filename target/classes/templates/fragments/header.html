@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    <div th:fragment="css">
+        <!------ Include the above in your HEAD tag ---------->
+
+        <!-- Font Awesome CSS-->
+        <link rel="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+
+            .top-bar {
+                background: #23282e;
+                color: #fff;
+                font-size: 1.5rem;
+                padding: 10px 40px;
+            }
+        </style>
+    </div>
+</head>
+<body>
+<nav th:fragment="header">
+    <div class="top-bar">
+        <div class="col-md-6 d-md-block d-none">
+            <p>游戏舆情分析</p>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
