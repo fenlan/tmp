@@ -26,6 +26,13 @@
             display: inline-block;
             width: 15%;
         }
+        .layui-input-block {
+            margin-left: 80px!important;
+        }
+        .layui-card {
+            display: inline-block;
+            margin-top: 15px;
+        }
     </style>
     <div th:replace="fragments/header :: css"></div>
     <div th:replace="fragments/sider :: css"></div>
@@ -96,11 +103,28 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="seletctbar">
+                            <button class="layui-btn">查询</button>
+                        </div>
                     </div>
-
-
                 </form>
-
+                <br>
+                <div style="background:lightgray;">
+                    <div style="margin-left:3%;">
+                        <div class="layui-card">
+                            <div class="layui-card-body">
+                                24567<br>
+                                全部发言人数
+                            </div>
+                        </div>
+                        <div class="layui-card">
+                            <div class="layui-card-body">
+                                45346<br>
+                                全部发言量
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
